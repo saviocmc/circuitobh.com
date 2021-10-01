@@ -10,7 +10,7 @@ const Home: NextPage = () => {
       </Head>
 
     </>
-  )
-}
+  );
+};
 
 export default Home;
