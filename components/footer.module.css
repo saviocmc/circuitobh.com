@@ -1,0 +1,33 @@
+.Footer {
+    text-align: end;
+    margin-top: 80px;
+    padding: 24px;
+    background-color: black;
+    box-shadow: 0 0 10px black;
+}
+
+.Footer img {
+    height: 30px;
+    margin: 5px 10px;
+    filter: invert(100%);
+}
+
+.Footer a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    text-align: end;
+}
+
+.SocialMedia img {
+    padding-left: 10px;
+}
+
+.Contacts {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: end;
+    align-items: center;
+}
+

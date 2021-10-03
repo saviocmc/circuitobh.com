@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Footer from '../components/footer';
+import Header from '../components/header';
 import css from './index.module.css';
 
 const Home: NextPage = () => {
@@ -9,6 +11,8 @@ const Home: NextPage = () => {
       <Head>
         <title> Circuito BH </title>
       </Head>
+
+      <Header />
 
       <section className={css.About}>
         <h1>Quem <span className={css.AccentColor}>somos</span></h1>
@@ -62,6 +66,8 @@ const Home: NextPage = () => {
         </div>
 
       </section>
+
+      <Footer />
 
     </>
   );
