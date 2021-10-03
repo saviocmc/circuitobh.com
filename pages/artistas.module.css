@@ -1,0 +1,54 @@
+.Artists {
+  margin: 0 32px;
+}
+
+.Artist {
+    text-align: start;
+    max-width: 900px;
+    margin: 32px auto;
+    display: flex;
+}
+
+.ArtistPoster {
+    width: 400px;
+    height: 220px;
+    background-position: center;
+    background-size: cover;
+}
+
+.ArtistDescription {
+    flex: 1;
+    margin-left: 32px;
+}
+
+.ArtistDescription h2 {
+    margin: 0 0 8px 0;
+    line-height: 1;
+}
+
+.ArtistDescription p {
+    margin: 0;
+}
+
+.ArtistDescription a {
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .Artist {
+        display: block;
+        margin-bottom: 64px;
+    }
+
+    .ArtistDescription {
+        margin: 16px 0 0 0;
+    }
+
+    .ArtistPoster {
+        width: 100%;
+        height: calc((100vw - 100px) / 16 * 9);
+    }
+}

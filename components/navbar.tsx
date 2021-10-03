@@ -8,6 +8,7 @@ const Navbar = () => {
 
   const routes = [
     { path: '/', name: 'Página Inicial' },
+    { path: '/artistas', name: 'Artistas' },
   ];
 
   return (
