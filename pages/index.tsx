@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       </Head>
 
       <section className={css.About}>
-        <h1>Quem <span>somos</span></h1>
+        <h1>Quem <span className={css.AccentColor}>somos</span></h1>
         <p>
           A Circuito BH surgiu com a proposta de assessorar músicos e bandas
           de Belo Horizonte, promovendo shows e contribuindo para a inserção
@@ -23,7 +23,7 @@ const Home: NextPage = () => {
 
       <section className={css.Services}>
 
-        <h1>O que <span>fazemos</span></h1>
+        <h1>O que <span className={css.AccentColor}>fazemos</span></h1>
 
         <div className={css.ServicesGrid}>
 
