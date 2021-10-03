@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import Navbar from '../components/navbar';
 import css from './index.module.css';
 
 const Home: NextPage = () => {
@@ -13,6 +14,8 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
+
+      <Navbar />
 
       <section className={css.About}>
         <h1>Quem <span className={css.AccentColor}>somos</span></h1>
