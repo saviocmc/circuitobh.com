@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Build and deploy to Firebase Hosting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+
+      - name: Build and export the Next.js project
+        run: npm install && npx next build && npx next export
+
+      - name: Deploy to Firebase Hosting
+        run: npm install firebase-tools && npx firebase deploy -m "$MESSAGE" --token "$TOKEN"
+        env:
+          MESSAGE: ${{ github.event.head_commit.message }}
+          TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+
