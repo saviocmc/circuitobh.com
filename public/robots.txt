@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://circuitobh.com/sitemap.xml
