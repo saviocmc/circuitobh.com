@@ -14,13 +14,13 @@ jobs:
       - uses: actions/setup-node@v2
 
       - name: Update NPM
-        run: sudo npm install -g npm@latest
+        run: sudo npm install --global npm@latest
 
       - name: Build and export the Next.js project
         run: npm install && npx next build && npx next export
 
       - name: Deploy to Firebase Hosting
-        run: npm install firebase-tools && npx firebase deploy -m "$MESSAGE" --token "$TOKEN"
+        run: sudo npm install --global firebase-tools && npx firebase deploy -m "$MESSAGE" --token "$TOKEN"
         env:
           MESSAGE: ${{ github.event.head_commit.message }}
           TOKEN: ${{ secrets.FIREBASE_TOKEN }}
