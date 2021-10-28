@@ -17,7 +17,7 @@ jobs:
         run: sudo npm install --global npm@latest
 
       - name: Build and export the Next.js project
-        run: npm install && npx next build && npx next export
+        run: npm install && npm run build
 
       - name: Deploy to Firebase Hosting
         run: sudo npm install --global firebase-tools && npx firebase deploy -m "$MESSAGE" --token "$TOKEN"
