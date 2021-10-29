@@ -12,17 +12,17 @@ const Footer = () => {
       <div>
 
         <a href='https://www.facebook.com/bhcircuito'
-          rel='noreferrer noopener' target='_blank'>
+          rel='noreferrer noopener' target='_blank' title='Página do Facebook'>
           <FacebookIcon className={css.Icon} />
         </a>
 
         <a href='https://instagram.com/circuito_bh/'
-          rel='noreferrer noopener' target='_blank'>
+          rel='noreferrer noopener' target='_blank' title='Perfil no Instagram'>
           <InstagramIcon className={css.Icon} />
         </a>
 
         <a href='https://www.youtube.com/channel/UCP2AO8BXKQacuiFFn_Gq_kA'
-          rel='noreferrer noopener' target='_blank'>
+          rel='noreferrer noopener' target='_blank' title='Canal no Youtube'>
           <YoutubeIcon className={css.Icon} />
         </a>
 
