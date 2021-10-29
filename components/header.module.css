@@ -1,10 +1,16 @@
-.Header {
-  margin: 0 32px;
-  border-bottom: 3px solid white;
+.Header img {
+    max-height: 30vh;
+    margin: 0 32px;
+    width: calc(100% - 64px);
+    padding: 10px 0;
+    object-fit: contain;
+    border-bottom: 3px solid white;
 }
 
 @media (max-width: 700px) {
-  .Header {
-    border-bottom: 1px solid white;
-  }
+
+    .Header img {
+        border-bottom: 1px solid white;
+    }
+
 }
