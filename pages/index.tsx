@@ -2,6 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import CameraIcon from '../components/icons/camera.svg';
+import CompassIcon from '../components/icons/compass.svg';
+import VideocamIcon from '../components/icons/videocam.svg';
 import Navbar from '../components/navbar';
 import css from './index.module.css';
 
@@ -34,7 +37,7 @@ const Home: NextPage = () => {
 
         <div className={css.ServicesGrid}>
 
-          <img src='/videocam.svg' alt='Ícone de uma filmadora' />
+          <VideocamIcon className={css.Icon} />
           <h2>Produção de videoclipes</h2>
           <p>
             Trabalhamos com a produção de um portfólio audiovisual para
@@ -44,7 +47,7 @@ const Home: NextPage = () => {
             trabalho de forma criativa.
           </p>
 
-          <img src='/compass.svg' alt='Ícone de uma bussola' />
+          <CompassIcon className={css.Icon} />
           <h2>Assessoria</h2>
           <p>
             A figura do agente ou do produtor executivo é fundamental
@@ -55,7 +58,7 @@ const Home: NextPage = () => {
             comunicação e cuidar do relacionamento com a mídia.
           </p>
 
-          <img src='/camera.svg' alt='Ícone de uma câmera' />
+          <CameraIcon className={css.Icon} />
           <h2>Fotografia</h2>
           <p>
             A sua imagem deve comunicar a essência do seu trabalho. E

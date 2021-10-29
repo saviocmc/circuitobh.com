@@ -1,24 +1,29 @@
 import css from './footer.module.css';
+import FacebookIcon from './icons/facebook.svg';
+import InstagramIcon from './icons/instagram.svg';
+import MailIcon from './icons/mail.svg';
+import WhatsappIcon from './icons/whatsapp.svg';
+import YoutubeIcon from './icons/youtube.svg';
 
 const Footer = () => {
   return (
     <footer className={css.Footer}>
 
-      <div className={css.SocialMedia}>
+      <div>
 
         <a href='https://www.facebook.com/bhcircuito'
           rel='noreferrer noopener' target='_blank'>
-          <img src='/facebook.svg' alt='Logo do Facebook' />
+          <FacebookIcon className={css.Icon} />
         </a>
 
         <a href='https://instagram.com/circuito_bh/'
           rel='noreferrer noopener' target='_blank'>
-          <img src='/instagram.svg' alt='Logo do Instagram' />
+          <InstagramIcon className={css.Icon} />
         </a>
 
         <a href='https://www.youtube.com/channel/UCP2AO8BXKQacuiFFn_Gq_kA'
           rel='noreferrer noopener' target='_blank'>
-          <img src='/youtube.svg' alt='Logo do YouTube' />
+          <YoutubeIcon className={css.Icon} />
         </a>
 
       </div>
@@ -26,10 +31,10 @@ const Footer = () => {
       <div className={css.Contacts}>
 
         <a href='mailto:louzadamaite@gmail.com'>louzadamaite@gmail.com</a>
-        <img src='/mail.svg' alt='Ícone de e-mail' />
+        <MailIcon className={css.Icon} />
 
-        <a href='tel:+5531987016193'>(31) 98701-6193</a>
-        <img src='/phone.svg' alt='Ícone de telefone' />
+        <a href='https://api.whatsapp.com/send?phone=+5531987016193'>(31) 98701-6193</a>
+        <WhatsappIcon className={css.Icon} />
 
       </div>
 
