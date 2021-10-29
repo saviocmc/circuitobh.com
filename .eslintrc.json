@@ -1,34 +1,21 @@
 {
-    "extends": "next/core-web-vitals",
-    "rules": {
-        "indent": [
-            "error",
-            2
-        ],
-        "jsx-quotes": [
-            "error",
-            "prefer-single"
-        ],
-        "object-curly-spacing": [
-            "error",
-            "always"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "react/jsx-tag-spacing": [
-            "error",
-            {
-                "closingSlash": "never",
-                "beforeSelfClosing": "always",
-                "afterOpening": "never",
-                "beforeClosing": "never"
-            }
-        ],
-        "semi": [
-            "error",
-            "always"
-        ]
-    }
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "indent": ["error", 2],
+    "jsx-quotes": ["error", "prefer-single"],
+    "object-curly-spacing": ["error", "always"],
+    "quotes": ["error", "single"],
+    "react/jsx-tag-spacing": [
+      "error",
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never",
+        "beforeClosing": "never"
+      }
+    ],
+    "semi": ["error", "always"]
+  }
 }
+
