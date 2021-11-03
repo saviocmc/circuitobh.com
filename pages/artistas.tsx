@@ -24,11 +24,11 @@ const Artists: NextPage = () => {
           <div className={css.Artist} key={artist.name}>
 
             <a href={`https://www.youtube.com/watch?v=${artist.video.id}`}
-              rel='noreferrer noopener' target='_blank'>
+              title={artist.video.title} rel='noreferrer noopener' target='_blank'>
 
               <div className={css.ArtistPoster}
                 style={{
-                  backgroundImage:`url(https://i.ytimg.com/vi/${artist.video.id}/hqdefault.jpg)`
+                  backgroundImage: `url(https://i.ytimg.com/vi/${artist.video.id}/hqdefault.jpg)`
                 }}>
 
               </div>
@@ -79,7 +79,7 @@ const artists: Artist[] = [
     `,
     video: {
       title: 'ABLUSADAS - SHOUL I EVER LOVE AGAIN',
-      id : 'kqMROjZXLDo',
+      id: 'kqMROjZXLDo',
     },
   },
   {
@@ -96,7 +96,7 @@ const artists: Artist[] = [
     `,
     video: {
       title: 'BIG RANCH - BIG RANCH',
-      id : '4WvkYNUT9FY',
+      id: '4WvkYNUT9FY',
     },
   },
   {
@@ -114,7 +114,7 @@ const artists: Artist[] = [
     `,
     video: {
       title: 'DOCTOR RAY BLUES BAND - MEN WHO LOVE TOO MUCH',
-      id : 'nXhlwT19W_U',
+      id: 'nXhlwT19W_U',
     },
   },
   {
@@ -131,7 +131,7 @@ const artists: Artist[] = [
     `,
     video: {
       title: 'EGBERTO BRANT - TIM TIM',
-      id : 'dR-rNvsZog0',
+      id: 'dR-rNvsZog0',
     },
   },
 ];
