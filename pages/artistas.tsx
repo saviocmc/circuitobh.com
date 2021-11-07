@@ -4,6 +4,7 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import Navbar from '../components/navbar';
 import css from './artistas.module.css';
+import { ReactYouTubeLite } from 'react-youtube-lite';
 
 const Artists: NextPage = () => {
   return (
@@ -23,17 +24,14 @@ const Artists: NextPage = () => {
 
           <div className={css.Artist} key={artist.name}>
 
-            <a href={`https://www.youtube.com/watch?v=${artist.video.id}`}
-              title={artist.video.title} rel='noreferrer noopener' target='_blank'>
-
-              <div className={css.ArtistPoster}
-                style={{
-                  backgroundImage: `url(https://i.ytimg.com/vi/${artist.video.id}/hqdefault.jpg)`
-                }}>
-
-              </div>
-
-            </a>
+            <div className={css.ArtistVideo}>
+              <ReactYouTubeLite
+                url={`https://www.youtube.com/watch?v=${artist.video.id}`}
+                title={artist.video.title}
+                adNetwork={false}
+                noCookie={true}
+              />
+            </div>
 
             <div className={css.ArtistDescription}>
               <h2> {artist.name} </h2>
