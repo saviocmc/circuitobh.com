@@ -1,10 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
 import Footer from '../components/footer';
 import Header from '../components/header';
 import Navbar from '../components/navbar';
 import css from './artistas.module.css';
-import { ReactYouTubeLite } from 'react-youtube-lite';
 
 const Artists: NextPage = () => {
   return (
@@ -25,12 +26,7 @@ const Artists: NextPage = () => {
           <div className={css.Artist} key={artist.name}>
 
             <div className={css.ArtistVideo}>
-              <ReactYouTubeLite
-                url={`https://www.youtube.com/watch?v=${artist.video.id}`}
-                title={artist.video.title}
-                adNetwork={false}
-                noCookie={true}
-              />
+              <LiteYouTubeEmbed id={artist.video.id} title={artist.video.title} />
             </div>
 
             <div className={css.ArtistDescription}>

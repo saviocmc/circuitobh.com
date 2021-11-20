@@ -10,7 +10,7 @@
     "next": "^12",
     "react": "^17",
     "react-dom": "^17",
-    "react-youtube-lite": "^1"
+    "react-lite-youtube-embed": "^2.1.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^5",
