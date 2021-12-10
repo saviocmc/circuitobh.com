@@ -19,7 +19,7 @@ jobs:
         run: npm install && npm run build
 
       - name: Deploy to Firebase Hosting
-        run: sudo npm install --global firebase-tools && npx firebase deploy -m "$MESSAGE" --token "$TOKEN"
+        run: npm install firebase-tools && npx firebase deploy -m "$MESSAGE" --token "$TOKEN"
         env:
           MESSAGE: ${{ github.event.head_commit.message }}
           TOKEN: ${{ secrets.FIREBASE_TOKEN }}
