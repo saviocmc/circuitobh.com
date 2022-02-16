@@ -2,9 +2,9 @@
   "name": "circuitobh.com",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "lint": "next lint"
+    "start": "next dev",
+    "lint": "next lint",
+    "build": "next build && next export"
   },
   "dependencies": {
     "next": "^12",
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6",
+    "@types/node": "^16",
     "@types/react": "^17",
     "eslint": "^8",
     "eslint-config-next": "^12",

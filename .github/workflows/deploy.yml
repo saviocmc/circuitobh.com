@@ -14,13 +14,14 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
+          cache: yarn
 
       - name: Build and export the Next.js project
-        run: npm install && npm run build
+        run: yarn && yarn build
 
       - name: Deploy to Firebase Hosting
-        run: npm install firebase-tools && npx firebase deploy -m "$MESSAGE" --token "$TOKEN"
+        run: yarn add firebase-tools && yarn run firebase deploy -m "$MESSAGE"
         env:
           MESSAGE: ${{ github.event.head_commit.message }}
-          TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
