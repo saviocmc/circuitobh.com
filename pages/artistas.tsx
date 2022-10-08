@@ -30,7 +30,7 @@ const Artists: NextPage = () => {
             </div>
 
             <div className={css.ArtistDescription}>
-              <h2> {artist.name.toUpperCase()} </h2>
+              <h2> {artist.name} </h2>
               <p> {artist.description} </p>
             </div>
 
