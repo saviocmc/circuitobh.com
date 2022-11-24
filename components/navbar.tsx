@@ -16,10 +16,12 @@ const Navbar = () => {
 
       {routes.map(route => (
 
-        <Link  href={route.path} key={route.path}>
-          <a className={route.path === pathname ? css.ActiveLink : css.Link}>
-            {route.name}
-          </a>
+        <Link 
+          href={route.path}
+          key={route.path}
+          className={route.path === pathname ? css.ActiveLink : css.Link}
+        >
+          {route.name}
         </Link>
 
       ))}
