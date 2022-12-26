@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^6",
-    "@types/node": "^16",
+    "@types/node": "^18",
     "@types/react": "^18",
     "eslint": "^8",
     "eslint-config-next": "^13",
