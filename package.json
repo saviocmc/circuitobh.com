@@ -1,6 +1,5 @@
 {
   "name": "circuitobh.com",
-  "version": "1.0.0",
   "scripts": {
     "start": "next dev",
     "lint": "next lint",
