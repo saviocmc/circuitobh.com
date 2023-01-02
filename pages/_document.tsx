@@ -1,5 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document';
-import { CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 
 const description = '\
 A Circuito BH surgiu com a proposta de assessorar músicos e bandas \
