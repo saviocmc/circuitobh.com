@@ -10,7 +10,6 @@ import css from './artistas.module.css';
 const Artists: NextPage = () => {
   return (
     <>
-
       <Head>
         <title> Artistas - Circuito BH </title>
       </Head>
@@ -20,28 +19,24 @@ const Artists: NextPage = () => {
       <Navbar />
 
       <main className={css.Artists}>
-
-        {artists.map(artist => (
-
+        {artists.map((artist) => (
           <div className={css.Artist} key={artist.name}>
-
             <div className={css.ArtistVideo}>
-              <LiteYouTubeEmbed id={artist.video.id} title={artist.video.title} />
+              <LiteYouTubeEmbed
+                id={artist.video.id}
+                title={artist.video.title}
+              />
             </div>
 
             <div className={css.ArtistDescription}>
               <h2> {artist.name} </h2>
               <p> {artist.description} </p>
             </div>
-
           </div>
-
         ))}
-
       </main>
 
       <Footer />
-
     </>
   );
 };
@@ -54,8 +49,8 @@ type Artist = {
   video: {
     title: string;
     id: string;
-  }
-}
+  };
+};
 
 const artists: Artist[] = [
   {
@@ -129,4 +124,3 @@ const artists: Artist[] = [
     },
   },
 ];
-

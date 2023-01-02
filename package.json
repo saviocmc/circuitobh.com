@@ -18,7 +18,22 @@
     "@types/react": "^18",
     "eslint": "^8",
     "eslint-config-next": "^13",
+    "eslint-config-prettier": "^8",
+    "prettier": "^2",
     "typescript": "^4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next",
+      "prettier"
+    ],
+    "rules": {
+      "@next/next/no-img-element": "off"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "jsxSingleQuote": true
   },
   "license": "MIT"
 }

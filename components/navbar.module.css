@@ -1,31 +1,29 @@
 .Nav {
-    margin: 16px;
+  margin: 16px;
 }
 
 .Link {
-    padding: 0 32px;
-    border-left: 3px solid white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: white;
+  padding: 0 32px;
+  border-left: 3px solid white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
 }
 
 .Link:first-child {
-    border: none;
+  border: none;
 }
 
 .ActiveLink {
-    composes: Link;
-    color: #DF3A5C;
+  composes: Link;
+  color: #df3a5c;
 }
 
 @media (max-width: 700px) {
-
-    .Link {
-        display: block;
-        margin: 16px;
-        border: none;
-    }
-
+  .Link {
+    display: block;
+    margin: 16px;
+    border: none;
+  }
 }
