@@ -13,14 +13,19 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: '18'
           cache: yarn
 
+      - name: Install dependencies
+        run: yarn install
+
       - name: Build and export the Next.js project
-        run: yarn install && yarn build
+        run: yarn build
+
+      - name: Install Firebase CLI
+        run: yarn global add firebase-tools
 
       - name: Deploy to Firebase Hosting
-        run: yarn add firebase-tools && yarn run firebase deploy -m "$MESSAGE"
+        run: firebase deploy --message='${{ github.event.head_commit.message }}'
         env:
-          MESSAGE: ${{ github.event.head_commit.message }}
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
