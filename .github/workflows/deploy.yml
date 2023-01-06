@@ -25,7 +25,10 @@ jobs:
       - name: Install Firebase CLI
         run: yarn global add firebase-tools
 
+      - name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+
       - name: Deploy to Firebase Hosting
         run: firebase deploy --message='${{ github.event.head_commit.message }}'
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
