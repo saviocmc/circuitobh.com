@@ -10,25 +10,29 @@ jobs:
     name: Build and deploy to Firebase Hosting
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: 🏗 Setup repo
+        uses: actions/checkout@v3
+
+      - name: 🏗 Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: yarn
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: yarn install
 
-      - name: Build and export the Next.js project
+      - name: ⚙️ Build and export the Next.js project
         run: yarn build
 
-      - name: Install Firebase CLI
+      - name: 🏗 Install Firebase CLI
         run: yarn global add firebase-tools
 
-      - name: 'Authenticate to Google Cloud'
+      - name: 🔑 Authenticate to Google Cloud
         uses: 'google-github-actions/auth@v1'
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
 
-      - name: Deploy to Firebase Hosting
+      - name: 🚀 Deploy to Firebase Hosting
         run: firebase deploy --message='${{ github.event.head_commit.message }}'
