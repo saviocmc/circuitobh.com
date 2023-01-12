@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../components/footer';
 import Header from '../components/header';
@@ -8,7 +7,7 @@ import VideocamIcon from '../components/icons/videocam.svg';
 import Navbar from '../components/navbar';
 import css from './index.module.css';
 
-const Home: NextPage = () => {
+export default function Page() {
   return (
     <>
       <Head>
@@ -72,6 +71,4 @@ const Home: NextPage = () => {
       <Footer />
     </>
   );
-};
-
-export default Home;
+}

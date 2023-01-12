@@ -16,7 +16,7 @@ const style: CSSProperties = {
   textAlign: 'center',
 };
 
-const Document = () => {
+export default function Document() {
   return (
     <Html lang='pt-BR'>
       <Head>
@@ -29,6 +29,4 @@ const Document = () => {
       </body>
     </Html>
   );
-};
-
-export default Document;
+}

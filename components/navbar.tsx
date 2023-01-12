@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import css from './navbar.module.css';
 
-const Navbar = () => {
+export default function Navbar() {
   const { pathname } = useRouter();
 
   const routes = [
@@ -23,6 +23,4 @@ const Navbar = () => {
       ))}
     </nav>
   );
-};
-
-export default Navbar;
+}

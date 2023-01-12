@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import Head from 'next/head';
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
@@ -7,7 +6,7 @@ import Header from '../components/header';
 import Navbar from '../components/navbar';
 import css from './artistas.module.css';
 
-const Artists: NextPage = () => {
+export default function Page() {
   return (
     <>
       <Head>
@@ -39,9 +38,7 @@ const Artists: NextPage = () => {
       <Footer />
     </>
   );
-};
-
-export default Artists;
+}
 
 type Artist = {
   name: string;

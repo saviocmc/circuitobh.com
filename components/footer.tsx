@@ -5,7 +5,7 @@ import MailIcon from './icons/mail.svg';
 import WhatsAppIcon from './icons/whatsapp.svg';
 import YouTubeIcon from './icons/youtube.svg';
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className={css.Footer}>
       <div>
@@ -48,6 +48,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
